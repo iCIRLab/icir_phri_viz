@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <package>
-  <name>kimm_phri_viz</name>
+  <name>icir_phri_viz</name>
   <version>0.6.4</version>
   <description>Visualization configuration for Clearpath Husky</description>
 

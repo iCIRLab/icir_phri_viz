@@ -277,7 +277,7 @@
             "dock_widget__": {
               "keys": {
                 "dock_widget_title": {
-                  "repr": "'kimm_phri_panda_husky_real_49inch_rviz.rviz[*] - RViz'",
+                  "repr": "'icir_phri_panda_husky_real_rviz.rviz[*] - RViz'",
                   "type": "repr"
                 },
                 "dockable": {
@@ -298,7 +298,7 @@
                   "type": "repr"
                 },
                 "rviz_config_file": {
-                  "repr": "'/home/kimm/kimm_catkin_phri_panda_husky/src/kimm_phri_panda_husky/rviz/kimm_phri_panda_husky_real_49inch_rviz.rviz'",
+                  "repr": "'/home/icir/icir_catkin_phri_panda_husky/src/icir_phri_panda_husky/rviz/icir_phri_panda_husky_real_rviz.rviz'",
                   "type": "repr"
                 }
               },

@@ -2,21 +2,28 @@
 <launch>  
   <arg name="robot_ip" default="192.168.10.52" />  
   <arg name="mobile" default="true"/>   
+  <arg name="rviz" default="true"/>   
 
   <param name="robot_group" type="string" value="ns1"/>  
   <param name="load_gripper" type="bool" value="false"/>
   <param name="robotiq_gripper" type="bool" value="true"/>
   <param name="mobile" type="bool" value="$(arg mobile)"/>  
+  <param name="rviz" type="bool" value="$(arg rviz)"/>  
 
   <group ns ="ns1">
     <group if="$(arg mobile)">      
-      <!-- rqt -->
-      <node name="rqt" pkg="rqt_gui" type="rqt_gui" args="--perspective-file $(find kimm_phri_viz)/rqt/kimm_phri_panda_husky_real_49inch.perspective" output="screen"/>            
+        <group if="$(arg rviz)">      
+          <node name="rviz" pkg="rviz" type="rviz" args="-d $(find icir_phri_viz)/rviz/icir_phri_panda_husky_real_rviz.rviz"/>
+        </group>
+        <group unless="$(arg rviz)">        
+          <!-- rqt -->
+          <node name="rqt" pkg="rqt_gui" type="rqt_gui" args="--perspective-file $(find icir_phri_viz)/rqt/icir_phri_panda_husky_real.perspective" output="screen"/>            
+        </group>
     </group>
 
     <group unless="$(arg mobile)">     
       <!-- rqt -->
-      <node name="rqt" pkg="rqt_gui" type="rqt_gui" args="--perspective-file $(find kimm_phri_viz)/rqt/kimm_phri_panda_real_49inch.perspective" output="screen"/>            
+      <node name="rqt" pkg="rqt_gui" type="rqt_gui" args="--perspective-file $(find icir_phri_viz)/rqt/icir_phri_panda_real.perspective" output="screen"/>            
     </group>
   </group>
 </launch>

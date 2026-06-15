@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0.2)
-project(kimm_phri_viz)
+project(icir_phri_viz)
 
 find_package(catkin REQUIRED)
 
